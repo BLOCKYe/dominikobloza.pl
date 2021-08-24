@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
+@import url("./icons.css");
+// colors
+$bg: #121217;
+$main: #fff;
+$second: #0d86f8;
+
+.t1 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+.t2 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.m20 {
+  margin-top: 20px;
+}
+
+.m40 {
+  margin-top: 40px;
+}
+
+.m80 {
+  margin-top: 80px;
+}
+
+.line {
+  margin-top: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+  height: 70px;
+
+  .top {
+    width: 1px;
+    height: 70px;
+    background-color: $main;
+    opacity: 0.1;
+  }
+
+  .bottom {
+    width: 1px;
+    height: 20px;
+    background-color: $main;
+  }
+}
+
+.logo {
+  width: 32px;
+  height: 33px;
+  background: url(../fonts/logo.svg);
+  background-size: 32px 33px;
+  z-index: 100;
+  position: fixed;
+  top: 40px;
+  left: 40px;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.2px;
+  color: $main;
+  background-color: $bg;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.landing {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  align-items: flex-end;
+
+  .container {
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    .header {
+      .headline {
+        font-weight: 400;
+        margin-top: 5px;
+      }
+
+      .text {
+        font-size: 16px;
+        opacity: 0.3;
+        margin-top: 10px;
+      }
+    }
+
+    .git {
+      margin-top: 40px;
+      color: $second;
+      font-size: 16px;
+      cursor: pointer;
+      width: auto;
+    }
+
+    .socials {
+      margin-top: 20vh;
+      font-size: 14px;
+      display: grid;
+      grid-template-columns: 1fr 40px 100px;
+
+      .link-container {
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .link {
+          opacity: 0.3;
+        }
+
+        .icon {
+          font-size: 0.6rem;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+}
+
+.about {
+  width: 100%;
+  display: flex;
+
+  .container {
+    margin-top: 40px;
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    .list {
+      max-width: 600px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+    }
+  }
+}
+
+.works {
+  width: 100%;
+  display: flex;
+
+  .container {
+    margin-top: 40px;
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    .tabs-container {
+      display: grid;
+      margin-top: 40px;
+      grid-template-columns: 1fr 1fr;
+
+      .tab-code {
+        border-bottom: solid 1px $main;
+        justify-self: center;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+        opacity: 0.1;
+        transition: 0.8s ease-in-out;
+        cursor: pointer;
+      }
+
+      .tab-design {
+        @extend .tab-code;
+      }
+
+      .active {
+        border-color: $second;
+        opacity: 1;
+        color: $second;
+      }
+    }
+
+    .code-container {
+      margin-top: 20px;
+    }
+
+    .design-container {
+      @extend .code-container;
+    }
+  }
+}
+
+.tab {
+  display: flex;
+  width: 100%;
+
+  .tab-container {
+    width: 100%;
+    margin-top: 40px;
+
+    .title {
+      font-weight: 400;
+      font-size: 18px;
+
+      .link {
+        color: $second;
+        font-weight: 400;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    }
+
+    .date {
+      @extend .t2;
+      opacity: 0.3;
+    }
+
+    .preview {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .tags {
+      margin-top: 20px;
+      opacity: 0.3;
+      font-weight: 300;
+      font-size: 14px;
+    }
+
+    .socials {
+      margin-top: 20px;
+      font-size: 18px;
+      display: grid;
+      grid-template-columns: .5fr 1fr;
+
+      .link-container {
+        justify-self: start;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .goto {
+          opacity: 1;
+        }
+
+        .icon {
+          font-size: 0.6rem;
+          margin-top: 2px;
+        }
+      }
+    }
+
+    .divider {
+        height: 1px;
+        background-color: $main;
+        opacity: .1;
+        width: 100%;
+        margin-top: 40px;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  html {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
