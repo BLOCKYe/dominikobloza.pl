@@ -273,6 +273,15 @@ html {
   margin-top: 40px;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (min-width: 500px) {
   html {
     max-width: 600px;

@@ -38,7 +38,7 @@ function Works() {
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 10, opacity: 0 }}
-              transition={{ duration: 1, ease: "easeInOut", delay: .3 }}
+              transition={{ duration: .3, ease: "easeInOut", delay: .3 }}
             >
               <Casino />
               <Weather />
@@ -52,7 +52,7 @@ function Works() {
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 10, opacity: 0 }}
-              transition={{ duration: 1, ease: "easeInOut", delay: .3 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
               className="design-container"
             >
               <Weather />

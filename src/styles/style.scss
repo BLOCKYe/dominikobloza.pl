@@ -261,6 +261,17 @@ html {
   }
 }
 
+.modal {
+position: fixed;
+top: 0;
+left: 0;
+display: flex;
+
+.modal-container {
+
+}
+}
+
 @media (min-width: 500px) {
   html {
     max-width: 600px;
