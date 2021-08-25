@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import Casino from "./code-tabs/Casino";
-import Weather from "./code-tabs/Weather";
 
 function Works() {
   const [code, setCode] = useState(true);
@@ -38,10 +37,10 @@ function Works() {
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 10, opacity: 0 }}
-              transition={{ duration: .3, ease: "easeInOut", delay: .3 }}
+              transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
             >
               <Casino />
-              <Weather />
+              <Casino />
               <Casino />
             </motion.div>
           )}
@@ -55,8 +54,7 @@ function Works() {
               transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
               className="design-container"
             >
-              <Weather />
-              <Weather />
+              <Casino />
             </motion.div>
           )}
         </AnimatePresence>
