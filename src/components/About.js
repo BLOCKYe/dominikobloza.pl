@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 
 function About() {
+  
   return (
     <div className="about">
       <div className="container">

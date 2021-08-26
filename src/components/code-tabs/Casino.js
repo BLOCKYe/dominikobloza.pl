@@ -9,7 +9,7 @@ function Casino() {
     name: "Roulette",
     link: "Casino-app",
     date: "August 2021",
-    desc: "Application working as a simulator, you can bet coins and win... afortune. I also implemented currency converter in deposit zone.",
+    desc: "The app works like a simulator, you can bet coins and win a fortune. I also implemented currency converter in deposit zone.",
     tags: "React, Js, Sass, Figma, Motion, Router",
   });
 

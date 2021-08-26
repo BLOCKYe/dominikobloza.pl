@@ -14,7 +14,9 @@ function Works() {
           <div
             onClick={() => {
               setDesign(false);
-              setCode(true);
+              setTimeout(() => {
+                setCode(true);
+              }, 300);
             }}
             className={`tab-code ${code ? "active" : ""}`}
           >
@@ -22,8 +24,10 @@ function Works() {
           </div>
           <div
             onClick={() => {
-              setDesign(true);
               setCode(false);
+              setTimeout(() => {
+                setDesign(true);
+              }, 300);
             }}
             className={`tab-design ${design ? "active" : ""}`}
           >
@@ -37,7 +41,7 @@ function Works() {
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 10, opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
+              transition={{ duration: 0.3, delay: 0.3 }}
             >
               <Casino />
               <Casino />
@@ -45,14 +49,15 @@ function Works() {
             </motion.div>
           )}
         </AnimatePresence>
+
         <AnimatePresence>
           {design && (
             <motion.div
+              className="design-container"
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 10, opacity: 0 }}
-              transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
-              className="design-container"
+              exit={{ y: 100, opacity: 0 }}
+              transition={{ duration: 0.3, delay: 0.3 }}
             >
               <Casino />
             </motion.div>
