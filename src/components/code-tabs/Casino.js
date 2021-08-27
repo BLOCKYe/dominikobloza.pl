@@ -31,16 +31,16 @@ function Casino() {
         <div className="tags">{data.tags}</div>
         <div className="socials">
           <motion.div
-            whileHover={{ rotate: 10 }}
-            whileTap={{ rotate: 10 }}
+            whileHover={{ x: 5 }}
+            whileTap={{ x: 5 }}
             className="link-container"
           >
             <div className="goto">Github</div>
             <span className="icon-go icon"></span>
           </motion.div>
           <motion.div
-            whileHover={{ rotate: 10 }}
-            whileTap={{ rotate: 10 }}
+            whileHover={{ x: 5 }}
+            whileTap={{ x: 5 }}
             className="link-container"
           >
             <div className="goto">Website</div>
