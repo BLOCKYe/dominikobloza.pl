@@ -13,7 +13,7 @@ function About() {
               transition={{
                 duration: 0.7,
                 ease: "easeInOut",
-                delay: 1,
+                delay: .5,
               }}
               className="container"
             >

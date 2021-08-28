@@ -3,6 +3,8 @@ import React from "react";
 import TrackVisibility from "react-on-screen";
 
 function Footer() {
+  const copy = "Copyright © DominikObloza 2021 <> Designed and created by Me.";
+
   return (
     <TrackVisibility offset={300} partialVisibility className="footer">
       {({ isVisible }) =>
@@ -13,13 +15,19 @@ function Footer() {
             transition={{
               duration: 0.7,
               ease: "easeInOut",
-              delay: 1,
+              delay: .5,
             }}
             className="container"
           >
-            <div className="t2">Github</div>
-            <div className="t2">LinkedIn</div>
-            <div className="t2">Dominik Obłoza 2021. Created by Me.</div>
+            <div className="social-icon">
+              <div className="github"></div>
+              <div className="t">Github</div>
+            </div>
+            <div className="social-icon">
+              <div className="linkedin"></div>
+              <div className="t">LinkedIn</div>
+            </div>
+            <div className="copyright ">{copy}</div>
           </motion.div>
         )
       }

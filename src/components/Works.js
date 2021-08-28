@@ -6,6 +6,7 @@ import TrackVisibility from "react-on-screen";
 function Works() {
   const [code, setCode] = useState(true);
   const [design, setDesign] = useState(false);
+  const [sandbox, setsandbox] = useState(false);
 
   return (
     <TrackVisibility partialVisibility className="works">
@@ -17,7 +18,7 @@ function Works() {
             transition={{
               duration: 0.7,
               ease: "easeInOut",
-              delay: 1,
+              delay: .5,
             }}
             className="container"
           >
@@ -26,6 +27,7 @@ function Works() {
               <div
                 onClick={() => {
                   setDesign(false);
+                  setsandbox(false);
                   setTimeout(() => {
                     setCode(true);
                   }, 300);
@@ -37,6 +39,7 @@ function Works() {
               <div
                 onClick={() => {
                   setCode(false);
+                  setsandbox(false);
                   setTimeout(() => {
                     setDesign(true);
                   }, 300);
@@ -44,6 +47,18 @@ function Works() {
                 className={`tab-design ${design ? "active" : ""}`}
               >
                 Design
+              </div>
+              <div
+                onClick={() => {
+                  setDesign(false);
+                  setCode(false);
+                  setTimeout(() => {
+                    setsandbox(true);
+                  }, 300);
+                }}
+                className={`tab-sandbox ${sandbox ? "active" : ""}`}
+              >
+                Sandbox
               </div>
             </div>
             <AnimatePresence>
@@ -70,6 +85,21 @@ function Works() {
                   exit={{ y: 100, opacity: 0 }}
                   transition={{ duration: 0.3, delay: 0.3 }}
                 >
+                  <Casino />
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <AnimatePresence>
+              {sandbox && (
+                <motion.div
+                  className="sandbox-container"
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 10, opacity: 0 }}
+                  transition={{ duration: 0.3, delay: 0.3 }}
+                >
+                  <Casino />
                   <Casino />
                 </motion.div>
               )}

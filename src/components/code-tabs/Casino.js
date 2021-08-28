@@ -1,17 +1,30 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import ModalPreview from "../ModalPreview";
-import preview from "./roulette.png";
+import preview1 from "./roulette.png";
+import preview2 from "./roulette2.png";
 
 function Casino() {
   const [modal, setModal] = useState(false);
+  const [thumb, setthumb] = useState(0);
   const [data] = useState({
     name: "Roulette",
     link: "Casino-app",
     date: "August 2021",
     desc: "The app works like a simulator, you can bet coins and win a fortune. I also implemented currency converter in deposit zone.",
-    tags: "React, Js, Sass, Figma, Motion, Router",
+    tags: "React, Js, Sass, Figma, Motion",
   });
+
+  const pickJpg = () => {
+    switch (thumb) {
+      case 0:
+        return preview1;
+      case 1:
+        return preview2;
+      default:
+        return preview1;
+    }
+  };
 
   return (
     <div className="tab">
@@ -24,10 +37,26 @@ function Casino() {
         <div className="t2">{data.desc}</div>
         <img
           onClick={() => setModal(true)}
-          src={preview}
-          alt={preview}
+          src={pickJpg()}
+          alt={pickJpg()}
           className="preview"
         ></img>
+
+        <div className="previews">
+          <img
+            onClick={() => setthumb(0)}
+            src={preview1}
+            alt={preview1}
+            className={`thumb-left ${thumb === 0 ? "active" : ""}`}
+          ></img>
+          <img
+            onClick={() => setthumb(1)}
+            src={preview2}
+            alt={preview2}
+            className={`thumb-right ${thumb === 1 ? "active" : ""}`}
+          ></img>
+        </div>
+
         <div className="tags">{data.tags}</div>
         <div className="socials">
           <motion.div
@@ -51,7 +80,17 @@ function Casino() {
         <div className="divider"></div>
       </div>
 
-      {modal && <ModalPreview data={data} img={preview} setModal={setModal} />}
+      {modal && (
+        <ModalPreview
+          data={data}
+          img={pickJpg()}
+          preview1={preview1}
+          preview2={preview2}
+          setModal={setModal}
+          setthumb={setthumb}
+          thumb={thumb}
+        />
+      )}
     </div>
   );
 }
