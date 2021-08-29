@@ -10,12 +10,31 @@ function ModalPreview(props) {
       className="modal"
     >
       <div className="close-btn" onClick={() => props.setModal(false)}>
-        <span className="t2">back to portfolio</span>
-        <span className="icon-go icon"></span>
+        <span className="t2">X</span>
       </div>
 
       <div className="modal-container">
         <div className="t1">{props.data.name}</div>
+        <div className="t2">{props.data.desc}</div>
+        <div className="socials">
+          <motion.div
+            whileHover={{ x: 5 }}
+            whileTap={{ rotate: 10 }}
+            className="link-container"
+          >
+            <div className="goto">Github</div>
+            <span className="icon-go icon"></span>
+          </motion.div>
+          <motion.div
+            whileHover={{ x: 5 }}
+            whileTap={{ rotate: 10 }}
+            className="link-container"
+          >
+            <div className="goto">Website</div>
+            <span className="icon-go icon"></span>
+          </motion.div>
+        </div>
+
         <img src={props.img} alt={props.img} className="preview"></img>
 
         <div className="previews">
@@ -31,26 +50,6 @@ function ModalPreview(props) {
             alt={props.preview2}
             className={`thumb-right ${props.thumb === 1 ? "active" : ""}`}
           ></img>
-        </div>
-        <div className="t2">{props.data.desc}</div>
-
-        <div className="socials">
-          <motion.div
-            whileHover={{ rotate: 10 }}
-            whileTap={{ rotate: 10 }}
-            className="link-container"
-          >
-            <div className="goto">Github</div>
-            <span className="icon-go icon"></span>
-          </motion.div>
-          <motion.div
-            whileHover={{ rotate: 10 }}
-            whileTap={{ rotate: 10 }}
-            className="link-container"
-          >
-            <div className="goto">Website</div>
-            <span className="icon-go icon"></span>
-          </motion.div>
         </div>
       </div>
 

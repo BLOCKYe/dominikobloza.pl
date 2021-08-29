@@ -6,7 +6,7 @@ function Footer() {
   const copy = "Copyright © DominikObloza 2021 <> Designed and created by Me.";
 
   return (
-    <TrackVisibility offset={300} partialVisibility className="footer">
+    <TrackVisibility offset={100} partialVisibility className="footer">
       {({ isVisible }) =>
         isVisible && (
           <motion.div
@@ -27,7 +27,7 @@ function Footer() {
               <div className="linkedin"></div>
               <div className="t">LinkedIn</div>
             </div>
-            <div className="copyright ">{copy}</div>
+            <div className="copyright">{copy}</div>
           </motion.div>
         )
       }

@@ -94,12 +94,12 @@ function Landing() {
               <div className="line">
                 <div className="top"></div>
                 <motion.div
-                  animate={{ y: 30 }}
-                  initial={{ y: -90 }}
+                  animate={{ y: 0 }}
+                  initial={{ y: -120 }}
                   transition={{
                     repeat: Infinity,
-                    duration: 3,
-                    repeatDelay: 3,
+                    duration: 2,
+                    repeatDelay: 2,
                   }}
                   className="bottom"
                 ></motion.div>

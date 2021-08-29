@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import ModalPreview from "../ModalPreview";
-import preview1 from "./roulette.png";
-import preview2 from "./roulette2.png";
+import preview1 from "./roulette2.png";
+import preview2 from "./roulette.png";
 
 function Casino() {
   const [modal, setModal] = useState(false);
@@ -29,54 +29,59 @@ function Casino() {
   return (
     <div className="tab">
       <div className="tab-container">
-        <div className="title">
-          <span>{data.name}</span>
-          <span className="link">@{data.link}</span>
+        <div className="p1">
+          <div className="title">
+            <span>{data.name}</span>
+            <span className="link">@{data.link}</span>
+          </div>
+          <div className="date">{data.date}</div>
+          <div className="t2">{data.desc}</div>
         </div>
-        <div className="date">{data.date}</div>
-        <div className="t2">{data.desc}</div>
-        <img
-          onClick={() => setModal(true)}
-          src={pickJpg()}
-          alt={pickJpg()}
-          className="preview"
-        ></img>
-
-        <div className="previews">
+        <div className="p2">
           <img
-            onClick={() => setthumb(0)}
-            src={preview1}
-            alt={preview1}
-            className={`thumb-left ${thumb === 0 ? "active" : ""}`}
+            onClick={() => setModal(true)}
+            src={pickJpg()}
+            alt={pickJpg()}
+            className="preview"
           ></img>
-          <img
-            onClick={() => setthumb(1)}
-            src={preview2}
-            alt={preview2}
-            className={`thumb-right ${thumb === 1 ? "active" : ""}`}
-          ></img>
-        </div>
 
-        <div className="tags">{data.tags}</div>
-        <div className="socials">
-          <motion.div
-            whileHover={{ x: 5 }}
-            whileTap={{ x: 5 }}
-            className="link-container"
-          >
-            <div className="goto">Github</div>
-            <span className="icon-go icon"></span>
-          </motion.div>
-          <motion.div
-            whileHover={{ x: 5 }}
-            whileTap={{ x: 5 }}
-            className="link-container"
-          >
-            <div className="goto">Website</div>
-            <span className="icon-go icon"></span>
-          </motion.div>
+          <div className="previews">
+            <img
+              onClick={() => setthumb(0)}
+              src={preview1}
+              alt={preview1}
+              className={`thumb-left ${thumb === 0 ? "active" : ""}`}
+            ></img>
+            <img
+              onClick={() => setthumb(1)}
+              src={preview2}
+              alt={preview2}
+              className={`thumb-right ${thumb === 1 ? "active" : ""}`}
+            ></img>
+          </div>
         </div>
+        <div className="p3">
+          <div className="tags">{data.tags}</div>
 
+          <div className="socials">
+            <motion.div
+              whileHover={{ x: 5 }}
+              whileTap={{ x: 5 }}
+              className="link-container"
+            >
+              <div className="goto">Github</div>
+              <span className="icon-go icon"></span>
+            </motion.div>
+            <motion.div
+              whileHover={{ x: 5 }}
+              whileTap={{ x: 5 }}
+              className="link-container"
+            >
+              <div className="goto">Website</div>
+              <span className="icon-go icon"></span>
+            </motion.div>
+          </div>
+        </div>
         <div className="divider"></div>
       </div>
 
