@@ -13,6 +13,10 @@
   line-height: 1.5;
 }
 
+.m0 {
+  margin-top: 0;
+}
+
 .m20 {
   margin-top: 20px;
 }
@@ -114,7 +118,7 @@ a {
 .landing .container {
   width: 100%;
   margin-left: 30px;
-  margin-bottom: 40px;
+  padding-bottom: 80px;
   margin-right: 30px;
 }
 
@@ -179,7 +183,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  min-height: 90vh;
+  min-height: 100vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -204,6 +208,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 100vh;
   height: 100%;
 }
 
@@ -220,6 +225,7 @@ a {
   margin-top: 40px;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  font-size: 14px;
 }
 
 .works .container .columns .left .tabs-container .tab-code, .works .container .columns .left .tabs-container .tab-design, .works .container .columns .left .tabs-container .tab-sandbox {
@@ -233,6 +239,12 @@ a {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   cursor: url("../img/hover.svg"), auto;
+}
+
+.works .container .columns .left .tabs-container .tab-code:hover, .works .container .columns .left .tabs-container .tab-design:hover, .works .container .columns .left .tabs-container .tab-sandbox:hover {
+  color: #0d86f8;
+  border-color: #0d86f8;
+  opacity: 0.8;
 }
 
 .works .container .columns .left .tabs-container .active {
@@ -349,8 +361,8 @@ a {
 
 .tab .tab-container .divider {
   height: 1px;
-  background-color: #fff;
-  opacity: 0.1;
+  background-color: #393939;
+  opacity: 1;
   width: 100%;
   margin-top: 40px;
 }
@@ -375,6 +387,10 @@ a {
   text-align: end;
 }
 
+.modal .close-btn .t2, .modal .close-btn .tab .tab-container .date, .tab .tab-container .modal .close-btn .date {
+  font-size: 1rem;
+}
+
 .modal .hollow {
   height: 20vh;
   margin-top: 40px;
@@ -389,6 +405,11 @@ a {
 .modal .modal-container .t2, .modal .modal-container .tab .tab-container .date, .tab .tab-container .modal .modal-container .date {
   margin-left: 30px;
   margin-right: 30px;
+}
+
+.modal .modal-container .link {
+  color: #0d86f8;
+  margin-left: 10px;
 }
 
 .modal .modal-container .preview {
@@ -597,10 +618,10 @@ a {
     font-size: 1.2rem;
   }
   .tab .tab-container .tags {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .tab .tab-container .socials {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .modal .modal-container .t1 {
     font-size: 1.1rem;
@@ -612,6 +633,7 @@ a {
     margin-right: 60px;
     font-size: 0.9rem;
     margin-top: 40px;
+    font-size: 0.8rem;
   }
   .modal .modal-container .socials {
     margin-left: 60px;
@@ -626,6 +648,9 @@ a {
     margin-left: 30vh;
     margin-right: 20vh;
   }
+  .landing .container {
+    padding-bottom: 40px;
+  }
   .landing .container .header {
     width: 50%;
   }
@@ -635,10 +660,15 @@ a {
   }
   .about {
     min-height: 100vh;
+    margin-top: 40px;
   }
   .about .container .t2, .about .container .tab .tab-container .date, .tab .tab-container .about .container .date {
     line-height: 1.5;
-    width: 60%;
+    width: 67%;
+  }
+  .about .container .me {
+    border-left: 2px solid #313131;
+    padding-left: 20px;
   }
   .about .container .about-columns {
     display: -ms-grid;
@@ -660,7 +690,7 @@ a {
     position: relative;
   }
   .works .container .columns .left {
-    margin-right: 30px;
+    padding-right: 30px;
   }
   .works .container .columns .left .tabs-container {
     -ms-grid-columns: 1fr;
@@ -721,11 +751,21 @@ a {
     -ms-grid-column-span: 2;
     grid-area: divider;
   }
-  .modal .modal-container .preview {
-    width: 80%;
+  .modal .modal-container {
+    width: 60%;
+    margin: 0 auto;
   }
-  .modal .modal-container .previews {
-    width: 50%;
+  .modal .modal-container .preview {
+    width: 100%;
+    border-radius: 15px;
+  }
+  .modal .modal-container .previews .thumb-left, .modal .modal-container .previews .thumb-right {
+    width: 20%;
+  }
+  .modal .modal-container .socials {
+    -ms-grid-columns: 0.2fr 1fr;
+        grid-template-columns: 0.2fr 1fr;
+    font-size: 0.8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

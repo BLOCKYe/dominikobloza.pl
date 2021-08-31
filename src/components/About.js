@@ -17,11 +17,11 @@ function About() {
             }}
             className="container"
           >
-            <div className="t1">Yo, I’m Dominik. Nice to meet you.</div>
-            <div className="t2">
-              My journey as a designer began 5 years ago, but now I’ve been
-              progressing as a frontend developer. I am characterized by
-              ambition, hard work and a fresh approach.
+            <div className="t1 m0">Yo, I’m Dominik.</div>
+            <div className="t2 me">
+              My journey as a designer began 5 years ago, but now I am
+              progressing as a frontend developer. What sets me apart is my
+              ambition, hard work and fresh approach.
             </div>
 
             <div className="about-columns">

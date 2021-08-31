@@ -74,7 +74,7 @@ function Landing() {
                 <motion.div
                   onClick={() => window.open("https://github.com/BLOCKYe")}
                   whileHover={{ x: 5 }}
-                  whileTap={{ x: 5 }}
+                  whileTap={{ rotate: 10 }}
                   className="link-container"
                 >
                   <div className="link">Github</div>
@@ -83,7 +83,7 @@ function Landing() {
 
                 <motion.div
                   whileHover={{ x: 5 }}
-                  whileTap={{ x: 5 }}
+                  whileTap={{ rotate: 10 }}
                   className="link-container"
                 >
                   <div className="link">LinkedIn</div>

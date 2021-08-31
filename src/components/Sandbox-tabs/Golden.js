@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import ModalPreview from "../ModalPreview";
-import preview1 from "./roulette2.png";
-import preview2 from "./roulette.png";
+import preview1 from "./gold.jpg";
+import preview2 from "./gold.jpg";
 
-function Casino() {
+function Golden() {
   const [modal, setModal] = useState(false);
   const [thumb, setthumb] = useState(0);
   const [data] = useState({
-    name: "Roulette",
-    link: "Casino-app",
-    date: "August 2021",
-    desc: "The app works like a simulator, you can bet coins and win a fortune. I also implemented currency converter in deposit zone.",
-    tags: "React, Js, Sass, Figma, Motion",
-    socials: true,
+    name: "Golden ratio",
+    link: "",
+    date: "1 year ago",
+    desc: "//////////////////.",
+    tags: "Sandbox, logo, aesthetics",
+    socials: false,
   });
 
   const pickJpg = () => {
@@ -64,24 +64,26 @@ function Casino() {
         <div className="p3">
           <div className="tags">{data.tags}</div>
 
-          <div className="socials">
-            <motion.div
-              whileHover={{ x: 5 }}
-              whileTap={{ rotate: 10 }}
-              className="link-container"
-            >
-              <div className="goto">Github</div>
-              <span className="icon-go icon"></span>
-            </motion.div>
-            <motion.div
-              whileHover={{ x: 5 }}
-              whileTap={{ rotate: 10 }}
-              className="link-container"
-            >
-              <div className="goto">Website</div>
-              <span className="icon-go icon"></span>
-            </motion.div>
-          </div>
+          {data.socials && (
+            <div className="socials">
+              <motion.div
+                whileHover={{ x: 5 }}
+                whileTap={{ rotate: 10 }}
+                className="link-container"
+              >
+                <div className="goto">Github</div>
+                <span className="icon-go icon"></span>
+              </motion.div>
+              <motion.div
+                whileHover={{ x: 5 }}
+                whileTap={{ rotate: 10 }}
+                className="link-container"
+              >
+                <div className="goto">Website</div>
+                <span className="icon-go icon"></span>
+              </motion.div>
+            </div>
+          )}
         </div>
         <div className="divider"></div>
       </div>
@@ -101,4 +103,4 @@ function Casino() {
   );
 }
 
-export default Casino;
+export default Golden;

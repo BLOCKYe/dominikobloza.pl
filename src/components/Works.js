@@ -2,6 +2,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import Casino from "./code-tabs/Casino";
 import TrackVisibility from "react-on-screen";
+import Mail from "./design-tabs/Mail";
+import Golden from "./Sandbox-tabs/Golden";
 
 function Works() {
   const [code, setCode] = useState(true);
@@ -9,7 +11,7 @@ function Works() {
   const [sandbox, setsandbox] = useState(false);
 
   return (
-    <TrackVisibility partialVisibility className="works">
+    <TrackVisibility offset={-100} partialVisibility className="works">
       {({ isVisible }) =>
         isVisible && (
           <motion.div
@@ -22,7 +24,7 @@ function Works() {
             }}
             className="container"
           >
-            <div className="t1">Here you can see some my work</div>
+            <div className="t1">Some my work.</div>
             <div className="columns">
               <div className="left">
                 <div className="tabs-container">
@@ -32,7 +34,7 @@ function Works() {
                       setsandbox(false);
                       setTimeout(() => {
                         setCode(true);
-                      }, 300);
+                      }, 501);
                     }}
                     className={`tab-code ${code ? "active" : ""}`}
                   >
@@ -44,7 +46,7 @@ function Works() {
                       setsandbox(false);
                       setTimeout(() => {
                         setDesign(true);
-                      }, 300);
+                      }, 501);
                     }}
                     className={`tab-design ${design ? "active" : ""}`}
                   >
@@ -56,7 +58,7 @@ function Works() {
                       setCode(false);
                       setTimeout(() => {
                         setsandbox(true);
-                      }, 300);
+                      }, 501);
                     }}
                     className={`tab-sandbox ${sandbox ? "active" : ""}`}
                   >
@@ -72,9 +74,8 @@ function Works() {
                       initial={{ y: 10, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: 10, opacity: 0 }}
-                      transition={{ duration: 0.3, delay: 0.3 }}
+                      transition={{ duration: 0.3, }}
                     >
-                      <Casino />
                       <Casino />
                     </motion.div>
                   )}
@@ -87,9 +88,9 @@ function Works() {
                       initial={{ y: 10, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: 100, opacity: 0 }}
-                      transition={{ duration: 0.3, delay: 0.3 }}
+                      transition={{ duration: 0.3, }}
                     >
-                      <Casino />
+                      <Mail />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -101,10 +102,9 @@ function Works() {
                       initial={{ y: 10, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: 10, opacity: 0 }}
-                      transition={{ duration: 0.3, delay: 0.3 }}
+                      transition={{ duration: 0.3, }}
                     >
-                      <Casino />
-                      <Casino />
+                      <Golden />
                     </motion.div>
                   )}
                 </AnimatePresence>
