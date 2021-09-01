@@ -376,9 +376,6 @@ a {
     cursor: url("../img/hover.svg"), auto;
     text-align: end;
 
-    .t2 {
-      font-size: 1rem;
-    }
   }
 
   .hollow {
@@ -779,5 +776,37 @@ a {
 @media (min-width: 1600px) {
   html {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .landing {
+    .container {
+      .socials {
+        margin-top: 10vh;
+      }
+    }
+  }
+}
+
+@media (max-height: 500px) {
+  .line {
+    height: 40px;
+  }
+  
+  .landing {
+    .container {
+      padding-left: 5vw;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+@media (max-height: 350px) {
+  
+  .landing {
+    .container {
+      padding-left: 15vw;
+    }
   }
 }

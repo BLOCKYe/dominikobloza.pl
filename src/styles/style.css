@@ -386,10 +386,6 @@ a {
   text-align: end;
 }
 
-.modal .close-btn .t2, .modal .close-btn .tab .tab-container .date, .tab .tab-container .modal .close-btn .date {
-  font-size: 1rem;
-}
-
 .modal .hollow {
   height: 20vh;
   margin-top: 40px;
@@ -771,6 +767,28 @@ a {
 @media (min-width: 1600px) {
   html {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .landing .container .socials {
+    margin-top: 10vh;
+  }
+}
+
+@media (max-height: 500px) {
+  .line {
+    height: 40px;
+  }
+  .landing .container {
+    padding-left: 5vw;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-height: 350px) {
+  .landing .container {
+    padding-left: 15vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
