@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 
 function Logo() {
   return (
-    <div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, type: "tween", delay: 1 }}
-        className="logo"
-      ></motion.div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, type: "tween", delay: 1 }}
+    >
+      <div className="logo"></div>
       <div className="bar">
         <div className="socials">
           <motion.div
+            onClick={() => window.open("https://github.com/BLOCKYe")}
             whileHover={{ x: 5 }}
             whileTap={{ x: 5 }}
             className="link-container"
@@ -21,6 +21,7 @@ function Logo() {
             <span className="icon-go icon"></span>
           </motion.div>
           <motion.div
+            onClick={() => window.open("https://www.linkedin.com/in/dominik-ob%C5%82oza-5aa61021b/")}
             whileHover={{ x: 5 }}
             whileTap={{ x: 5 }}
             className="link-container"
@@ -30,7 +31,7 @@ function Logo() {
           </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

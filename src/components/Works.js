@@ -4,6 +4,7 @@ import Casino from "./code-tabs/Casino";
 import TrackVisibility from "react-on-screen";
 import Mail from "./design-tabs/Mail";
 import Golden from "./Sandbox-tabs/Golden";
+import Weather from "./code-tabs/Weather";
 
 function Works() {
   const [code, setCode] = useState(true);
@@ -74,8 +75,11 @@ function Works() {
                       initial={{ y: 10, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: 10, opacity: 0 }}
-                      transition={{ duration: 0.3, }}
+                      transition={{ duration: 0.3 }}
                     >
+
+                      {/* Code zone */}
+                      <Weather />
                       <Casino />
                     </motion.div>
                   )}
@@ -88,8 +92,10 @@ function Works() {
                       initial={{ y: 10, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: 100, opacity: 0 }}
-                      transition={{ duration: 0.3, }}
+                      transition={{ duration: 0.3 }}
                     >
+
+                       {/* Code design */}
                       <Mail />
                     </motion.div>
                   )}
@@ -102,8 +108,10 @@ function Works() {
                       initial={{ y: 10, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: 10, opacity: 0 }}
-                      transition={{ duration: 0.3, }}
+                      transition={{ duration: 0.3 }}
                     >
+
+                       {/* Sandbox zone */}
                       <Golden />
                     </motion.div>
                   )}

@@ -82,6 +82,7 @@ function Landing() {
                 </motion.div>
 
                 <motion.div
+                  onClick={() => window.open("https://www.linkedin.com/in/dominik-ob%C5%82oza-5aa61021b/")}
                   whileHover={{ x: 5 }}
                   whileTap={{ rotate: 10 }}
                   className="link-container"

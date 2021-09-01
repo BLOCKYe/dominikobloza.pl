@@ -15,18 +15,28 @@ function Footer() {
             transition={{
               duration: 0.7,
               ease: "easeInOut",
-              delay: .5,
+              delay: 0.5,
             }}
             className="container"
           >
-            <div className="social-icon">
+            <motion.div
+              onClick={() => window.open("https://github.com/BLOCKYe")}
+              whileHover={{ x: 5 }}
+              whileTap={{ rotate: 10 }}
+              className="social-icon"
+            >
               <div className="github"></div>
               <div className="t">Github</div>
-            </div>
-            <div className="social-icon">
+            </motion.div>
+            <motion.div
+              onClick={() => window.open("https://www.linkedin.com/in/dominik-ob%C5%82oza-5aa61021b/")}
+              whileHover={{ x: 5 }}
+              whileTap={{ rotate: 10 }}
+              className="social-icon"
+            >
               <div className="linkedin"></div>
               <div className="t">LinkedIn</div>
-            </div>
+            </motion.div>
             <div className="copyright">{copy}</div>
           </motion.div>
         )

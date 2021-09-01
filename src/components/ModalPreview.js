@@ -1,7 +1,16 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect } from "react";
 
 function ModalPreview(props) {
+  // lock body scroll when modal is open
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
+
   return (
     <motion.div
       initial={{ y: 10, opacity: 0 }}
@@ -9,13 +18,19 @@ function ModalPreview(props) {
       transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
       className="modal"
     >
-      <div className="close-btn" onClick={() => props.setModal(false)}>
-        <span className="t2">
-          <strong>x</strong>
-        </span>
-      </div>
-
       <div className="modal-container">
+        <motion.div
+          whileHover={{ x: 5 }}
+          whileTap={{ x: 5 }}
+          className="close-btn"
+          onClick={() => props.setModal(false)}
+        >
+          <span className="t2">
+            <strong>back to portfolio</strong>
+            <span className="icon-go icon"></span>
+          </span>
+        </motion.div>
+
         <div className="t1">
           <span>{props.data.name}</span>
           <span className="link">{props.data.link}</span>
@@ -25,6 +40,7 @@ function ModalPreview(props) {
         {props.data.socials && (
           <div className="socials">
             <motion.div
+              onClick={() => window.open(props.data.github)}
               whileHover={{ x: 5 }}
               whileTap={{ rotate: 10 }}
               className="link-container"
@@ -33,6 +49,7 @@ function ModalPreview(props) {
               <span className="icon-go icon"></span>
             </motion.div>
             <motion.div
+              onClick={() => window.open(props.data.website)}
               whileHover={{ x: 5 }}
               whileTap={{ rotate: 10 }}
               className="link-container"
