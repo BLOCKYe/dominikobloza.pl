@@ -1,15 +1,21 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
-import Casino from "./code-tabs/Casino";
 import TrackVisibility from "react-on-screen";
+// projects
 import Mail from "./design-tabs/Mail";
 import Golden from "./Sandbox-tabs/Golden";
 import Weather from "./code-tabs/Weather";
+import Casino from "./code-tabs/Casino";
+import Stragan from "./design-tabs/Stragan";
+import Watch from "./design-tabs/Watch";
+import Radek from "./design-tabs/Radek";
+import SmartHome from "./design-tabs/SmartHome";
 
 function Works() {
   const [code, setCode] = useState(true);
   const [design, setDesign] = useState(false);
   const [sandbox, setsandbox] = useState(false);
+  const [isReady, setisReady] = useState(true);
 
   return (
     <TrackVisibility offset={-100} partialVisibility className="works">
@@ -31,11 +37,15 @@ function Works() {
                 <div className="tabs-container">
                   <div
                     onClick={() => {
-                      setDesign(false);
-                      setsandbox(false);
-                      setTimeout(() => {
-                        setCode(true);
-                      }, 501);
+                      if (isReady) {
+                        setisReady(false);
+                        setDesign(false);
+                        setsandbox(false);
+                        setTimeout(() => {
+                          setCode(true);
+                          setisReady(true);
+                        }, 600);
+                      }
                     }}
                     className={`tab-code ${code ? "active" : ""}`}
                   >
@@ -43,11 +53,15 @@ function Works() {
                   </div>
                   <div
                     onClick={() => {
-                      setCode(false);
-                      setsandbox(false);
-                      setTimeout(() => {
-                        setDesign(true);
-                      }, 501);
+                      if (isReady) {
+                        setisReady(false);
+                        setsandbox(false);
+                        setCode(false);
+                        setTimeout(() => {
+                          setDesign(true);
+                          setisReady(true);
+                        }, 600);
+                      }
                     }}
                     className={`tab-design ${design ? "active" : ""}`}
                   >
@@ -55,11 +69,15 @@ function Works() {
                   </div>
                   <div
                     onClick={() => {
-                      setDesign(false);
-                      setCode(false);
-                      setTimeout(() => {
-                        setsandbox(true);
-                      }, 501);
+                      if (isReady) {
+                        setisReady(false);
+                        setCode(false);
+                        setDesign(false);
+                        setTimeout(() => {
+                          setsandbox(true);
+                          setisReady(true);
+                        }, 600);
+                      }
                     }}
                     className={`tab-sandbox ${sandbox ? "active" : ""}`}
                   >
@@ -77,7 +95,6 @@ function Works() {
                       exit={{ y: 10, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-
                       {/* Code zone */}
                       <Weather />
                       <Casino />
@@ -91,11 +108,14 @@ function Works() {
                       className="design-container"
                       initial={{ y: 10, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
-                      exit={{ y: 100, opacity: 0 }}
+                      exit={{ y: 10, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-
-                       {/* Code design */}
+                      {/* Design zone */}
+                      <Radek />
+                      <Stragan />
+                      <Watch />
+                      <SmartHome />
                       <Mail />
                     </motion.div>
                   )}
@@ -110,8 +130,7 @@ function Works() {
                       exit={{ y: 10, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-
-                       {/* Sandbox zone */}
+                      {/* Sandbox zone */}
                       <Golden />
                     </motion.div>
                   )}

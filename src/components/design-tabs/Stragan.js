@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import ModalPreview from "../ModalPreview";
-import preview1 from "./img/gold.jpg";
-import preview2 from "./img/gold.jpg";
+import preview1 from "./img/stragan1.png";
+import preview2 from "./img/stragan2.png";
 
-function Golden() {
+function Stragan() {
   const [modal, setModal] = useState(false);
   const [thumb, setthumb] = useState(0);
   const [data] = useState({
-    name: "Golden ratio",
-    link: "",
-    date: "1 year ago",
-    desc: "//////////////////.",
-    tags: "Sandbox, logo, aesthetics",
+    name: "Shop",
+    link: "Stragan.com",
+    date: "July 2021",
+    desc: "Project of online store selling gaming peripherals. Work on the website in progress.",
+    tags: "UI, UX, Adobe Xd, Ecommerce, Shop",
     socials: false,
+    website: "/",
+    github: "/",
   });
 
   const pickJpg = () => {
@@ -63,10 +65,10 @@ function Golden() {
         </div>
         <div className="p3">
           <div className="tags">{data.tags}</div>
-
           {data.socials && (
             <div className="socials">
               <motion.div
+                onClick={() => window.open(data.github)}
                 whileHover={{ x: 5 }}
                 whileTap={{ rotate: 10 }}
                 className="link-container"
@@ -75,6 +77,7 @@ function Golden() {
                 <span className="icon-go icon"></span>
               </motion.div>
               <motion.div
+                onClick={() => window.open(data.website)}
                 whileHover={{ x: 5 }}
                 whileTap={{ rotate: 10 }}
                 className="link-container"
@@ -103,4 +106,4 @@ function Golden() {
   );
 }
 
-export default Golden;
+export default Stragan;

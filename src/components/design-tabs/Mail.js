@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import ModalPreview from "../ModalPreview";
-import preview1 from "./mail.png";
-import preview2 from "./mail.png";
+import preview1 from "./img/mail.png";
+import preview2 from "./img/mail.png"
 
 function Mail() {
   const [modal, setModal] = useState(false);

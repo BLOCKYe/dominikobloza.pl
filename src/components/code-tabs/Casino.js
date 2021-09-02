@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import ModalPreview from "../ModalPreview";
-import preview1 from "./roulette2.png";
-import preview2 from "./roulette.png";
+import preview1 from "./img/roulette2.png";
+import preview2 from "./img/roulette.png";
 
 function Casino() {
   const [modal, setModal] = useState(false);

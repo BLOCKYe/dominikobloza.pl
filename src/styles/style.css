@@ -182,8 +182,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
-  min-height: 100vh;
+  height: 800px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -241,20 +240,14 @@ a {
   cursor: url("../img/hover.svg"), auto;
 }
 
-.works .container .columns .left .tabs-container .tab-code:hover, .works .container .columns .left .tabs-container .tab-design:hover, .works .container .columns .left .tabs-container .tab-sandbox:hover {
-  color: #0d86f8;
-  border-color: #0d86f8;
-  opacity: 0.8;
-}
-
 .works .container .columns .left .tabs-container .active {
   border-color: #0d86f8;
   opacity: 1;
   color: #0d86f8;
 }
 
-.works .container .columns .left .right .code-container, .works .container .columns .left .right .design-container, .works .container .columns .left .right .sandbox-container {
-  margin-top: 20px;
+.works .container .columns .right .code-container, .works .container .columns .right .design-container, .works .container .columns .right .sandbox-container {
+  opacity: 1;
 }
 
 .tab {
@@ -654,7 +647,7 @@ a {
         grid-template-columns: 0.8fr 40px 130px;
   }
   .about {
-    min-height: 100vh;
+    height: 100vh;
     margin-top: 40px;
   }
   .about .container .t2, .about .container .tab .tab-container .date, .tab .tab-container .about .container .date {
@@ -767,6 +760,9 @@ a {
 @media (min-width: 1600px) {
   html {
     font-size: 1.5rem;
+  }
+  .landing .container .header {
+    width: 50%;
   }
 }
 

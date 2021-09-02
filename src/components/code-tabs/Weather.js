@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import ModalPreview from "../ModalPreview";
-import preview1 from "./weather1.png";
-import preview2 from "./weather2.png";
+import preview1 from "./img/weather1.png";
+import preview2 from "./img/weather2.png";
 
 function Weather() {
   const [modal, setModal] = useState(false);

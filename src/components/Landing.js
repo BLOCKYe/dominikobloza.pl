@@ -11,7 +11,7 @@ function Landing() {
             <div className="header">
               <div className="c">
                 <motion.div
-                  initial={{ y: 100, rotate: 15 }}
+                  initial={{ y: 150, rotate: 15 }}
                   animate={{ y: 0, rotate: 0 }}
                   transition={{
                     duration: 1.2,
@@ -25,7 +25,7 @@ function Landing() {
               </div>
               <div className="c">
                 <motion.div
-                  initial={{ y: 100, rotate: 15 }}
+                  initial={{ y: 150, rotate: 15 }}
                   animate={{ y: 0, rotate: 0 }}
                   transition={{
                     duration: 1.2,
@@ -39,7 +39,7 @@ function Landing() {
               </div>
               <div className="c">
                 <motion.div
-                  initial={{ y: 100, rotate: 15 }}
+                  initial={{ y: 150, rotate: 15 }}
                   animate={{ y: 0, rotate: 0 }}
                   transition={{
                     duration: 1.2,
