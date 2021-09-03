@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import ModalPreview from "../ModalPreview";
-import preview1 from "./img/watch2.png";
-import preview2 from "./img/watch1.png";
+import preview1 from "./img/todo1.png";
+import preview2 from "./img/todo2.png";
 
-function Watch() {
+function Todo() {
   const [modal, setModal] = useState(false);
   const [thumb, setthumb] = useState(0);
   const [data] = useState({
-    name: "Landing page",
-    link: "Just Watch",
-    date: "2 years ago",
-    desc: "Landing page for a store selling premium watches.",
-    tags: "UI, UX, Adobe Xd, Concept, Landing page",
-    socials: false,
+    name: "Todo app",
+    link: "Simple todo",
+    date: "July 2021",
+    desc: "A todo application that allows you to create notes. User can add a note, mark as done, delete and edit.",
+    tags: "React, Js, Sass, Figma, Todo, Content API, localStorage",
+    socials: true,
     website: "/",
     github: "/",
   });
@@ -28,6 +28,7 @@ function Watch() {
         return preview1;
     }
   };
+  
 
   return (
     <div className="tab">
@@ -65,28 +66,27 @@ function Watch() {
         </div>
         <div className="p3">
           <div className="tags">{data.tags}</div>
-          {data.socials && (
-            <div className="socials">
-              <motion.div
-                onClick={() => window.open(data.github)}
-                whileHover={{ x: 5 }}
-                whileTap={{ rotate: 10 }}
-                className="link-container"
-              >
-                <div className="goto">Github</div>
-                <span className="icon-go icon"></span>
-              </motion.div>
-              <motion.div
-                onClick={() => window.open(data.website)}
-                whileHover={{ x: 5 }}
-                whileTap={{ rotate: 10 }}
-                className="link-container"
-              >
-                <div className="goto">Website</div>
-                <span className="icon-go icon"></span>
-              </motion.div>
-            </div>
-          )}
+
+          <div className="socials">
+            <motion.div
+              onClick={() => window.open(data.github)}
+              whileHover={{ x: 5 }}
+              whileTap={{ rotate: 10 }}
+              className="link-container"
+            >
+              <div className="goto">Github</div>
+              <span className="icon-go icon"></span>
+            </motion.div>
+            <motion.div
+             onClick={() => window.open(data.website)}
+              whileHover={{ x: 5 }}
+              whileTap={{ rotate: 10 }}
+              className="link-container"
+            >
+              <div className="goto">Website</div>
+              <span className="icon-go icon"></span>
+            </motion.div>
+          </div>
         </div>
         <div className="divider"></div>
       </div>
@@ -106,4 +106,4 @@ function Watch() {
   );
 }
 
-export default Watch;
+export default Todo;

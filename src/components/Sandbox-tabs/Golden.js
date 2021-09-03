@@ -11,7 +11,7 @@ function Golden() {
     name: "Golden ratio",
     link: "",
     date: "1 year ago",
-    desc: "//////////////////.",
+    desc: "∞",
     tags: "Sandbox, logo, aesthetics",
     socials: false,
   });

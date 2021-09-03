@@ -10,6 +10,10 @@ import Stragan from "./design-tabs/Stragan";
 import Watch from "./design-tabs/Watch";
 import Radek from "./design-tabs/Radek";
 import SmartHome from "./design-tabs/SmartHome";
+import Todo from "./code-tabs/Todo";
+import Earth from "./Sandbox-tabs/Earth";
+import Eye from "./Sandbox-tabs/Eye";
+import Untitled from "./Sandbox-tabs/Untitled";
 
 function Works() {
   const [code, setCode] = useState(true);
@@ -98,6 +102,7 @@ function Works() {
                       {/* Code zone */}
                       <Weather />
                       <Casino />
+                      <Todo />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -131,6 +136,9 @@ function Works() {
                       transition={{ duration: 0.3 }}
                     >
                       {/* Sandbox zone */}
+                      <Earth />
+                      <Eye />
+                      <Untitled />
                       <Golden />
                     </motion.div>
                   )}

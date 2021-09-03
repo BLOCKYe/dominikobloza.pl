@@ -9,7 +9,7 @@ function Stragan() {
   const [thumb, setthumb] = useState(0);
   const [data] = useState({
     name: "Shop",
-    link: "Stragan.com",
+    link: "Stragan",
     date: "July 2021",
     desc: "Project of online store selling gaming peripherals. Work on the website in progress.",
     tags: "UI, UX, Adobe Xd, Ecommerce, Shop",

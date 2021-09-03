@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import ModalPreview from "../ModalPreview";
-import preview1 from "./img/watch2.png";
-import preview2 from "./img/watch1.png";
+import preview1 from "./img/earth1.jpg";
+import preview2 from "./img/earth2.jpg";
 
-function Watch() {
+function Earth() {
   const [modal, setModal] = useState(false);
   const [thumb, setthumb] = useState(0);
   const [data] = useState({
-    name: "Landing page",
-    link: "Just Watch",
-    date: "2 years ago",
-    desc: "Landing page for a store selling premium watches.",
-    tags: "UI, UX, Adobe Xd, Concept, Landing page",
+    name: "concept",
+    link: "Second earth",
+    date: "January 2021",
+    desc: "result of boredom",
+    tags: "Photoshop, concept, creativity",
     socials: false,
     website: "/",
     github: "/",
@@ -65,6 +65,7 @@ function Watch() {
         </div>
         <div className="p3">
           <div className="tags">{data.tags}</div>
+
           {data.socials && (
             <div className="socials">
               <motion.div
@@ -106,4 +107,4 @@ function Watch() {
   );
 }
 
-export default Watch;
+export default Earth;

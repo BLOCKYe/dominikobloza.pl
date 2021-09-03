@@ -9,7 +9,7 @@ function Radek() {
   const [thumb, setthumb] = useState(0);
   const [data] = useState({
     name: "Portfolio",
-    link: "RadekKisiel.pl",
+    link: "radekkisiel",
     date: "1 year ago",
     desc: "Portfolio design for a friend.",
     tags: "UI, UX, Adobe Xd, Portoflio",
