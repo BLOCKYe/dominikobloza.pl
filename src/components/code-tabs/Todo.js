@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import ModalPreview from "../ModalPreview";
-import preview1 from "./img/todo1.png";
-import preview2 from "./img/todo2.png";
+import preview1 from "./img/planme1.png";
+import preview2 from "./img/planme2.png";
 
 function Todo() {
   const [modal, setModal] = useState(false);
   const [thumb, setthumb] = useState(0);
   const [data] = useState({
     name: "Todo app",
-    link: "Simple todo",
+    link: "Plan-me",
     date: "July 2021",
-    desc: "A todo application that allows you to create notes. User can add a note, mark as done, delete and edit.",
-    tags: "React, Js, Sass, Figma, Todo, Content API, localStorage",
+    desc: "A todo application that allows you to create notes. User can add a note, mark as done, delete and edit. The session is stored in localstorage.",
+    tags: "React, Js, Sass, Figma, Context API, localStorage",
     socials: true,
-    website: "/",
-    github: "/",
+    website: "https://dominikobloza.usermd.net/",
+    github: "https://github.com/BLOCKYe/Plan-me",
   });
 
   const pickJpg = () => {

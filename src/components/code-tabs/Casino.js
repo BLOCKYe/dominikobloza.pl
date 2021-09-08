@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import ModalPreview from "../ModalPreview";
 import preview1 from "./img/roulette2.png";
-import preview2 from "./img/roulette.png";
+import preview2 from "./img/roulette1.png";
 
 function Casino() {
   const [modal, setModal] = useState(false);
@@ -12,8 +12,10 @@ function Casino() {
     link: "Casino-app",
     date: "August 2021",
     desc: "The app works like a simulator, you can bet coins and win a fortune. I also implemented currency converter in deposit zone.",
-    tags: "React, Js, Sass, Figma, Motion",
+    tags: "React, Js, Sass, Figma, Motion, localstorage",
     socials: true,
+    website: "https://www.casino-simulator.online/",
+    github: "https://github.com/BLOCKYe/Casino",
   });
 
   const pickJpg = () => {
@@ -26,6 +28,7 @@ function Casino() {
         return preview1;
     }
   };
+  
 
   return (
     <div className="tab">
@@ -66,6 +69,7 @@ function Casino() {
 
           <div className="socials">
             <motion.div
+              onClick={() => window.open(data.github)}
               whileHover={{ x: 5 }}
               whileTap={{ rotate: 10 }}
               className="link-container"
@@ -74,6 +78,7 @@ function Casino() {
               <span className="icon-go icon"></span>
             </motion.div>
             <motion.div
+             onClick={() => window.open(data.website)}
               whileHover={{ x: 5 }}
               whileTap={{ rotate: 10 }}
               className="link-container"

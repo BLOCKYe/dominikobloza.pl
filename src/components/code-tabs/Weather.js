@@ -11,7 +11,7 @@ function Weather() {
     name: "Weather app",
     link: "Pocket-weather",
     date: "August 2021",
-    desc: "The weather app allows you to check the weather by location or search. The app displays hourly and daily weather for 7 days.",
+    desc: "The weather app allows you to check the weather by location or by search. The app displays hourly and daily weather for 7 days.",
     tags: "React, Js, Sass, Adobe Xd, API, Weather",
     socials: true,
     website: "https://pocket-weather.online/",
@@ -28,7 +28,6 @@ function Weather() {
         return preview1;
     }
   };
-  
 
   return (
     <div className="tab">
@@ -78,7 +77,7 @@ function Weather() {
               <span className="icon-go icon"></span>
             </motion.div>
             <motion.div
-             onClick={() => window.open(data.website)}
+              onClick={() => window.open(data.website)}
               whileHover={{ x: 5 }}
               whileTap={{ rotate: 10 }}
               className="link-container"

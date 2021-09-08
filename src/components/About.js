@@ -54,9 +54,7 @@ function About() {
                   </div>
                 </div>
 
-                <div className="t2">
-                  I also had to deal with C++, Python and C#.
-                </div>
+                <div className="t2">I also dealt with C++, Python and C#</div>
               </div>
 
               <div className="col">
