@@ -14,6 +14,7 @@ import Todo from "./code-tabs/Todo";
 import Earth from "./Sandbox-tabs/Earth";
 import Eye from "./Sandbox-tabs/Eye";
 import Untitled from "./Sandbox-tabs/Untitled";
+import LineSwap from "./code-tabs/LineSwap";
 
 function Works() {
   const [code, setCode] = useState(true);
@@ -102,6 +103,7 @@ function Works() {
                       {/* Code zone */}
                       <Weather />
                       <Casino />
+                      <LineSwap />
                       <Todo />
                     </motion.div>
                   )}
