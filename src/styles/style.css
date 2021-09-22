@@ -145,7 +145,7 @@ a {
   width: 1fr;
   color: #0d86f8;
   font-size: 18px;
-  cursor: url("../img/hover.svg"), auto;
+  cursor: pointer;
 }
 
 .landing .container .socials {
@@ -165,7 +165,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: url("../img/hover.svg"), auto;
+  cursor: pointer;
 }
 
 .landing .container .socials .link-container .link {
@@ -237,7 +237,7 @@ a {
   opacity: 0.3;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  cursor: url("../img/hover.svg"), auto;
+  cursor: pointer;
 }
 
 .works .container .columns .left .tabs-container .active {
@@ -271,7 +271,7 @@ a {
   color: #0d86f8;
   font-weight: 400;
   margin-left: 10px;
-  cursor: url("../img/hover.svg"), auto;
+  cursor: pointer;
 }
 
 .tab .tab-container .date {
@@ -281,7 +281,7 @@ a {
 .tab .tab-container .preview {
   width: 100%;
   margin-top: 20px;
-  cursor: url("../img/hover.svg"), auto;
+  cursor: pointer;
   border-radius: 10px;
 }
 
@@ -340,7 +340,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: url("../img/hover.svg"), auto;
+  cursor: pointer;
 }
 
 .tab .tab-container .socials .link-container .goto {
@@ -375,7 +375,7 @@ a {
   padding-top: 40px;
   margin-bottom: 20px;
   font-weight: 400;
-  cursor: url("../img/hover.svg"), auto;
+  cursor: pointer;
   text-align: end;
 }
 
@@ -454,7 +454,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: url("../img/hover.svg"), auto;
+  cursor: pointer;
 }
 
 .modal .modal-container .socials .link-container .goto {
@@ -497,7 +497,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   justify-self: center;
-  cursor: url("../img/hover.svg"), auto;
+  cursor: pointer;
 }
 
 .footer .container .social-icon .github {
@@ -580,7 +580,7 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    cursor: url("../img/hover.svg"), auto;
+    cursor: pointer;
   }
   .bar .socials .link-container .goto {
     opacity: 1;
@@ -673,8 +673,8 @@ a {
   .works .container .columns {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.2fr 1fr;
-        grid-template-columns: 0.2fr 1fr;
+    -ms-grid-columns: 0.3fr 1fr;
+        grid-template-columns: 0.3fr 1fr;
     position: relative;
   }
   .works .container .columns .left {
@@ -693,8 +693,12 @@ a {
         justify-self: start;
     justify-items: center;
     text-align: start;
+    font-size: 16px;
     border-right: 1px solid #fff;
     padding: 10px 0px;
+  }
+  .works .container .columns .left .tabs-container .tab-code:hover, .works .container .columns .left .tabs-container .tab-design:hover, .works .container .columns .left .tabs-container .tab-sandbox:hover {
+    opacity: 1;
   }
   .works .container .columns .left .tabs-container .active {
     border-right: 1px solid #0d86f8;

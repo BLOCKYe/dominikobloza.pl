@@ -142,7 +142,7 @@ a {
       width: 1fr;
       color: $second;
       font-size: 18px;
-      cursor: url("../img/hover.svg"), auto;
+     cursor: pointer;
     }
 
     .socials {
@@ -155,7 +155,7 @@ a {
         justify-self: end;
         display: flex;
         align-items: center;
-        cursor: url("../img/hover.svg"), auto;
+       cursor: pointer;
 
         .link {
           opacity: 0.3;
@@ -218,7 +218,7 @@ a {
             padding-bottom: 10px;
             opacity: 0.3;
             transition: 0.3s ease-in-out;
-            cursor: url("../img/hover.svg"), auto;
+           cursor: pointer;
           }
 
           .tab-design {
@@ -270,7 +270,7 @@ a {
         color: $second;
         font-weight: 400;
         margin-left: 10px;
-        cursor: url("../img/hover.svg"), auto;
+       cursor: pointer;
       }
     }
 
@@ -282,7 +282,7 @@ a {
     .preview {
       width: 100%;
       margin-top: 20px;
-      cursor: url("../img/hover.svg"), auto;
+     cursor: pointer;
       border-radius: 10px;
     }
 
@@ -330,7 +330,7 @@ a {
         justify-self: start;
         display: flex;
         align-items: center;
-        cursor: url("../img/hover.svg"), auto;
+       cursor: pointer;
 
         .goto {
           opacity: 1;
@@ -367,7 +367,7 @@ a {
     padding-top: 40px;
     margin-bottom: 20px;
     font-weight: 400;
-    cursor: url("../img/hover.svg"), auto;
+   cursor: pointer;
     text-align: end;
   }
 
@@ -436,7 +436,7 @@ a {
         justify-self: start;
         display: flex;
         align-items: center;
-        cursor: url("../img/hover.svg"), auto;
+       cursor: pointer;
 
         .goto {
           opacity: 1;
@@ -472,7 +472,7 @@ a {
       display: flex;
       align-items: center;
       justify-self: center;
-      cursor: url("../img/hover.svg"), auto;
+     cursor: pointer;
 
       .github {
         grid-area: left;
@@ -545,7 +545,7 @@ a {
         justify-self: start;
         display: flex;
         align-items: center;
-        cursor: url("../img/hover.svg"), auto;
+       cursor: pointer;
 
         .goto {
           opacity: 1;
@@ -672,7 +672,7 @@ a {
     .container {
       .columns {
         display: grid;
-        grid-template-columns: 0.2fr 1fr;
+        grid-template-columns: 0.3fr 1fr;
         position: relative;
 
         .left {
@@ -687,8 +687,13 @@ a {
               justify-self: start;
               justify-items: center;
               text-align: start;
+              font-size: 16px;
               border-right: 1px solid $main;
               padding: 10px 0px;
+            }
+
+            .tab-code:hover {
+              opacity: 1;
             }
 
             .active {
