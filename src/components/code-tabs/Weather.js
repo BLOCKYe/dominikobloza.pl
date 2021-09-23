@@ -11,7 +11,7 @@ function Weather() {
     name: "Weather app",
     link: "Pocket-weather",
     date: "August 2021",
-    desc: "The weather app allows you to check the weather by location or by search. The app displays hourly and daily weather for 7 days.",
+    desc: "The weather app allows you to check the weather by location or by search. The app displays hourly and daily weather for 7 days",
     tags: "React, Js, Sass, Adobe Xd, API, Weather",
     socials: true,
     website: "https://pocket-weather.online/",
