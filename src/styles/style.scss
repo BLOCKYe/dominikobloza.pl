@@ -127,7 +127,6 @@ a {
 
       .c {
         overflow: hidden;
-        
       }
 
       .text {
@@ -143,7 +142,7 @@ a {
       width: 1fr;
       color: $second;
       font-size: 18px;
-     cursor: pointer;
+      cursor: pointer;
     }
 
     .socials {
@@ -156,7 +155,7 @@ a {
         justify-self: end;
         display: flex;
         align-items: center;
-       cursor: pointer;
+        cursor: pointer;
 
         .link {
           opacity: 0.3;
@@ -175,7 +174,7 @@ a {
   width: 100%;
   display: flex;
   height: 800px;
- // min-height: 100vh;
+  // min-height: 100vh;
   align-items: center;
 
   .container {
@@ -219,7 +218,7 @@ a {
             padding-bottom: 10px;
             opacity: 0.3;
             transition: 0.3s ease-in-out;
-           cursor: pointer;
+            cursor: pointer;
           }
 
           .tab-design {
@@ -271,7 +270,7 @@ a {
         color: $second;
         font-weight: 400;
         margin-left: 10px;
-       cursor: pointer;
+        cursor: pointer;
       }
     }
 
@@ -283,7 +282,7 @@ a {
     .preview {
       width: 100%;
       margin-top: 20px;
-     cursor: pointer;
+      cursor: pointer;
       border-radius: 10px;
     }
 
@@ -301,6 +300,7 @@ a {
         border: 1px solid $bg;
         transition: 0.3s ease-in-out;
         opacity: 0.3;
+        cursor: pointer;
       }
 
       .thumb-right {
@@ -331,7 +331,7 @@ a {
         justify-self: start;
         display: flex;
         align-items: center;
-       cursor: pointer;
+        cursor: pointer;
 
         .goto {
           opacity: 1;
@@ -368,7 +368,7 @@ a {
     padding-top: 40px;
     margin-bottom: 20px;
     font-weight: 400;
-   cursor: pointer;
+    cursor: pointer;
     text-align: end;
   }
 
@@ -413,6 +413,7 @@ a {
         border: 1px solid $bg;
         transition: 0.3s ease-in-out;
         opacity: 0.3;
+        cursor: pointer;
       }
 
       .thumb-right {
@@ -437,7 +438,7 @@ a {
         justify-self: start;
         display: flex;
         align-items: center;
-       cursor: pointer;
+        cursor: pointer;
 
         .goto {
           opacity: 1;
@@ -473,7 +474,7 @@ a {
       display: flex;
       align-items: center;
       justify-self: center;
-     cursor: pointer;
+      cursor: pointer;
 
       .github {
         grid-area: left;
@@ -546,7 +547,7 @@ a {
         justify-self: start;
         display: flex;
         align-items: center;
-       cursor: pointer;
+        cursor: pointer;
 
         .goto {
           opacity: 1;
@@ -783,6 +784,13 @@ a {
         width: 50%;
       }
     }
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    max-width: 1920px;
+    margin: 0 auto;
   }
 }
 

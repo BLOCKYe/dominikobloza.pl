@@ -304,6 +304,7 @@ a {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .tab .tab-container .previews .thumb-right {
@@ -424,6 +425,7 @@ a {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .modal .modal-container .previews .thumb-right {
@@ -767,6 +769,13 @@ a {
   }
   .landing .container .header {
     width: 50%;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    max-width: 1920px;
+    margin: 0 auto;
   }
 }
 

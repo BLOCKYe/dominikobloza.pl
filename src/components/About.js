@@ -26,7 +26,7 @@ function About() {
 
             <div className="about-columns">
               <div className="col">
-                <div className="t1">Specialties.</div>
+                <div className="t1">Specialities.</div>
                 <div className="list">
                   <div className="p t2">
                     <span className="icon-list"></span>
@@ -46,7 +46,7 @@ function About() {
                   </div>
                   <div className="p t2">
                     <span className="icon-list"></span>
-                    HTML
+                    Typescript
                   </div>
                   <div className="p t2">
                     <span className="icon-list"></span>
