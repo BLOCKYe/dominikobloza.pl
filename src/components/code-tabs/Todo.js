@@ -14,7 +14,7 @@ function Todo() {
     desc: "A todo application that allows you to create notes. User can add a note, mark as done, delete and edit. The session is stored in localstorage.",
     tags: "React, Js, Sass, Figma, Context API, localStorage",
     socials: true,
-    website: "https://dominikobloza.usermd.net/",
+    website: "https://plan-me.online/",
     github: "https://github.com/BLOCKYe/Plan-me",
   });
 
